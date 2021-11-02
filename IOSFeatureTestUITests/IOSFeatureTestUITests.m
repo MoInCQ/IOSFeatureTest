@@ -30,6 +30,11 @@
     // UI tests must launch the application that they test.
     XCUIApplication *app = [[XCUIApplication alloc] init];
     [app launch];
+    
+    XCUIElement *textView = [[[[[[app childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeTextView].element;
+    [textView tap];
+    [textView tap];
+    [textView tap];
 
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
